@@ -45,4 +45,96 @@
   </footer>
   <script src="./assets/js/main.js"></script>
 </body>
+
+</html><!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contatti – ELITE Solutions</title>
+  <meta name="description" content="Contatta ELITE Solutions per informazioni sui pacchetti di supervisione e gestione proprietà di pregio. Risposte rapide e personalizzate." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo">ELITE Solutions</h1>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="bundle_it.html">Pacchetti</a></li>
+          <li><a href="contatti.html" class="active">Contatti</a></li>
+          
+          <li>
+            <select id="languageSelector" onchange="translateLanguage(this.value)">
+              <option value="">🌐 Lingua</option>
+              <option value="it">Italiano</option>
+              <option value="en">English</option>
+              <option value="fr">Français</option>
+              <option value="de">Deutsch</option>
+              <option value="es">Español</option>
+              <option value="ru">Русский</option>
+              <option value="zh-CN">中文</option>
+              <option value="ja">日本語</option>
+              <option value="ar">العربية</option>
+            </select>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-content" style="margin-top:120px;">
+    <section>
+      <h2>Contattaci</h2>
+      <p class="section-subtitle">
+        Compila il modulo per richiedere informazioni o ricevere un contatto diretto da ELITE Solutions.
+      </p>
+
+      <form id="contactForm" class="contact-form" onsubmit="event.preventDefault(); alert('Messaggio inviato correttamente! Ti risponderemo via email.');">
+        <label for="name">Nome e Cognome *</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Messaggio *</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <button type="submit" class="btn-primary">Invia Messaggio</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 ELITE Solutions — 
+        <a href="privacy_terms/privacy_it.html">Privacy</a> · 
+        <a href="privacy_terms/terms_it.html">Termini</a>
+      </p>
+    </div>
+  </footer>
+
+  <div id="google_translate_element" style="display:none;"></div>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage:'it',autoDisplay:false},'google_translate_element');
+    }
+    function translateLanguage(lang){
+      if(lang!==''){
+        const selectField=document.querySelector('#google_translate_element select');
+        if(selectField){
+          selectField.value=lang;
+          selectField.dispatchEvent(new Event('change'));
+        } else {
+          document.cookie='googtrans=/it/'+lang+';path=/';
+          window.location.reload();
+        }
+      }
+    }
+  </script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
 </html>
