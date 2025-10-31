@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pacchetto Steward - Gestione Operativa L2</title>
-  <meta name="description" content="Dettagli del pacchetto Steward: gestione operativa completa, personale, lavori e qualità. Perfetto per residenze vissute tutto l’anno." />
-
-  <link rel="stylesheet" href="./assets/css/style.css" /> 
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <title>Pacchetto Steward - Supervisione L2</title>
+  <meta name="description" content="Dettagli del pacchetto Steward: gestione operativa completa, personale, lavori e qualità. Ideale per residenze vissute tutto l’anno." />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon" />
 </head>
 
 <body>
@@ -16,36 +15,81 @@
       <h1 class="logo">ELITE Solutions</h1>
       <nav class="main-nav">
         <ul>
-          <li><a href="index_it.html">Home</a></li>
-          <li><a href="bundle_it.html">Pacchetti</a></li>
-          <li><a href="contatti.html">Contatti</a></li>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../bundle_it.html">Pacchetti</a></li>
+          <li><a href="../contatti.html">Contatti</a></li>
+          <li>
+            <select id="languageSelector" onchange="translateLanguage(this.value)">
+              <option value="">🌐 Lingua</option>
+              <option value="it">Italiano</option>
+              <option value="en">English</option>
+              <option value="fr">Français</option>
+              <option value="de">Deutsch</option>
+              <option value="es">Español</option>
+              <option value="ru">Русский</option>
+              <option value="zh-CN">中文</option>
+              <option value="ja">日本語</option>
+              <option value="ar">العربية</option>
+            </select>
+          </li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main class="container main-content">
-    <h2>Pacchetto Steward (L2)</h2>
-    <img src="./assets/images/steward_detail1.jpg" alt="Colazione lussuosa" style="width: 100%; max-width: 800px; margin: 20px auto; display: block;">
-    
-    <p class="section-subtitle">Livello L2 — Gestione operativa completa: personale, lavori e qualità. Perfetto per residenze vissute tutto l’anno.</p>
+    <section class="package-hero">
+      <div class="ph-text">
+        <h2>Pacchetto Steward (L2)</h2>
+        <p class="section-subtitle">Livello L2 — Gestione operativa completa, personale, lavori e qualità.</p>
 
-    <ul>
-      <li>Tutte le funzioni del Pacchetto Guardian.</li>
-      <li>Supervisione e gestione del personale domestico (assunzioni, orari, formazione).</li>
-      <li>Coordinamento di servizi e fornitori (pulizie, giardinaggio, piscina).</li>
-      <li>Controllo qualità e preparazione della residenza prima dell'arrivo del proprietario.</li>
-    </ul>
+        <ul>
+          <li><strong>Gestione Quotidiana:</strong> supervisione delle attività domestiche e del personale di servizio.</li>
+          <li><strong>Manutenzioni:</strong> gestione dei fornitori, pianificazione interventi e monitoraggio della qualità.</li>
+          <li><strong>Coordinamento Pulizie e Giardinaggio:</strong> pianificazione e verifica periodica.</li>
+          <li><strong>Accoglienza Ospiti:</strong> preparazione residenza, transfer, concierge e assistenza on-site.</li>
+          <li><strong>Report Operativi:</strong> aggiornamenti settimanali e controllo completo delle attività.</li>
+        </ul>
 
-    <a href="contatti.html" class="btn-primary">Richiedi un Preventivo Steward</a>
-    <a href="bundle_it.html" class="btn-outline">Confronta Pacchetti</a>
+        <div style="margin-top: 30px;">
+          <a href="../contatti.html" class="btn-primary">Richiedi un Preventivo Steward</a>
+          <a href="../bundle_it.html" class="btn-outline">Confronta Pacchetti</a>
+        </div>
+      </div>
+      <figure class="ph-media">
+        <img src="../assets/images/steward_detail1.jpg" alt="Gestione operativa proprietà di lusso - Pacchetto Steward">
+      </figure>
+    </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>© 2025 ELITE Solutions — <a href="privacy_it.html">Privacy</a> · <a href="terms_it.html">Termini</a> · <a href="contatti.html">Contatti</a></p>
+      <p>© 2025 ELITE Solutions — 
+        <a href="../privacy_terms/privacy_it.html">Privacy</a> · 
+        <a href="../privacy_terms/terms_it.html">Termini</a> · 
+        <a href="../contatti.html">Contatti</a>
+      </p>
     </div>
   </footer>
-  <script src="./assets/js/main.js"></script>
+
+  <div id="google_translate_element" style="display:none;"></div>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage:'it',autoDisplay:false},'google_translate_element');
+    }
+    function translateLanguage(lang){
+      if(lang!==''){
+        const selectField=document.querySelector('#google_translate_element select');
+        if(selectField){
+          selectField.value=lang;
+          selectField.dispatchEvent(new Event('change'));
+        } else {
+          document.cookie='googtrans=/it/'+lang+';path=/';
+          window.location.reload();
+        }
+      }
+    }
+  </script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
