@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pacchetto Guardian - Supervisione L1</title>
-  <meta name="description" content="Dettagli del pacchetto Guardian: sorveglianza, ispezioni e manutenzione programmata per seconde case." />
+  <meta name="description" content="Dettagli del pacchetto Guardian: sorveglianza, ispezioni e manutenzione programmata. Ideale per seconde case e periodi di assenza." />
 
-  <link rel="stylesheet" href="./assets/css/style.css" /> 
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="../assets/css/style.css" /> 
+  <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon" />
 </head>
 
 <body>
@@ -16,36 +16,85 @@
       <h1 class="logo">ELITE Solutions</h1>
       <nav class="main-nav">
         <ul>
-          <li><a href="index_it.html">Home</a></li>
-          <li><a href="bundle_it.html">Pacchetti</a></li>
-          <li><a href="contatti.html">Contatti</a></li>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../bundle_it.html">Pacchetti</a></li>
+          <li><a href="../contatti.html">Contatti</a></li>
+          <li>
+            <select id="languageSelector" onchange="translateLanguage(this.value)">
+              <option value="">🌐 Lingua</option>
+              <option value="it">Italiano</option>
+              <option value="en">English</option>
+              <option value="fr">Français</option>
+              <option value="de">Deutsch</option>
+              <option value="es">Español</option>
+              <option value="ru">Русский</option>
+              <option value="zh-CN">中文</option>
+              <option value="ja">日本語</option>
+              <option value="ar">العربية</option>
+            </select>
+          </li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main class="container main-content">
-    <h2>Pacchetto Guardian (L1)</h2>
-    <img src="./assets/images/guardian_detail1.jpg" alt="Villa sorvegliata" style="width: 100%; max-width: 800px; margin: 20px auto; display: block;">
-    
-    <p class="section-subtitle">Livello L1 — Sorveglianza, ispezioni e manutenzione programmata. Ideale per seconde case e periodi di assenza prolungata.</p>
+    <section class="package-hero">
+      <div class="ph-text">
+        <h2>Pacchetto Guardian (L1)</h2>
+        <p class="section-subtitle">
+          Livello L1 — Sorveglianza, ispezioni e manutenzione programmata.<br />
+          Ideale per seconde case e periodi di assenza.
+        </p>
 
-    <ul>
-      <li>Ispezioni settimanali della proprietà.</li>
-      <li>Verifica dei sistemi di sicurezza e allarme.</li>
-      <li>Gestione della corrispondenza e pagamenti di base.</li>
-      <li>Attivazione di servizi di emergenza 24/7.</li>
-    </ul>
+        <ul class="package-list">
+          <li><strong>Ispezioni Regolari:</strong> Visite settimanali per verifica impianti, sicurezza e integrità strutturale.</li>
+          <li><strong>Sorveglianza 24/7:</strong> Sistemi di allarme, videosorveglianza e reazione rapida in caso di emergenza (incendio, allagamento, intrusione).</li>
+          <li><strong>Manutenzione Preventiva:</strong> Coordinamento di piccole manutenzioni (giardino, piscina, pulizie base) e attivazione tempestiva dei professionisti.</li>
+          <li><strong>Gestione Posta e Pagamenti:</strong> Ritiro posta, gestione pagamenti utenze e tasse locali.</li>
+          <li><strong>Reportistica Remota:</strong> Comunicazioni costanti tramite report fotografici e testuali, garantendo massima trasparenza.</li>
+        </ul>
 
-    <a href="contatti.html" class="btn-primary">Richiedi un Preventivo Guardian</a>
-    <a href="bundle_it.html" class="btn-outline">Confronta Pacchetti</a>
+        <div class="cta-row">
+          <a href="../contatti.html" class="btn-primary">Richiedi un Preventivo Guardian</a>
+          <a href="../bundle_it.html" class="btn-outline">Confronta Pacchetti</a>
+        </div>
+      </div>
+
+      <figure class="ph-media">
+        <img src="../assets/images/guardian_detail1.jpg" alt="Villa di lusso, Servizio Guardian" />
+      </figure>
+    </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>© 2025 ELITE Solutions — <a href="privacy_it.html">Privacy</a> · <a href="terms_it.html">Termini</a> · <a href="contatti.html">Contatti</a></p>
+      <p>© 2025 ELITE Solutions — 
+        <a href="../privacy_terms/privacy_it.html">Privacy</a> · 
+        <a href="../privacy_terms/terms_it.html">Termini</a> · 
+        <a href="../contatti.html">Contatti</a>
+      </p>
     </div>
   </footer>
-  <script src="./assets/js/main.js"></script>
+
+  <div id="google_translate_element" style="display:none;"></div>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage:'it',autoDisplay:false},'google_translate_element');
+    }
+    function translateLanguage(lang){
+      if(lang!==''){
+        const selectField=document.querySelector('#google_translate_element select');
+        if(selectField){
+          selectField.value=lang;
+          selectField.dispatchEvent(new Event('change'));
+        } else {
+          document.cookie='googtrans=/it/'+lang+';path=/';
+          window.location.reload();
+        }
+      }
+    }
+  </script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
