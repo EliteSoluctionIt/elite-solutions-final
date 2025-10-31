@@ -48,4 +48,111 @@
   </footer>
   <script src="./assets/js/main.js"></script>
 </body>
+
+</html><!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pacchetti ELITE Solutions</title>
+  <meta name="description" content="Scopri i tre livelli di servizio: Guardian, Steward e Director. Gestione su misura per ogni tipo di proprietà di pregio." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo">ELITE Solutions</h1>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="bundle_it.html" class="active">Pacchetti</a></li>
+          <li><a href="contatti.html">Contatti</a></li>
+          
+          <li>
+            <select id="languageSelector" onchange="translateLanguage(this.value)">
+              <option value="">🌐 Lingua</option>
+              <option value="it">Italiano</option>
+              <option value="en">English</option>
+              <option value="fr">Français</option>
+              <option value="de">Deutsch</option>
+              <option value="es">Español</option>
+              <option value="ru">Русский</option>
+              <option value="zh-CN">中文</option>
+              <option value="ja">日本語</option>
+              <option value="ar">العربية</option>
+            </select>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-content" style="margin-top:120px;">
+    <section>
+      <h2>I Nostri Pacchetti</h2>
+      <p class="section-subtitle">Tre livelli di servizio dedicati alla gestione integrata di proprietà di lusso.</p>
+
+      <div class="card-grid">
+        <article class="card">
+          <img src="assets/images/guardian_detail1.jpg" alt="Pacchetto Guardian">
+          <div class="card-body">
+            <h4><a href="bundles/guardian_it.html">Guardian</a></h4>
+            <p>Livello L1 — Sorveglianza, ispezioni e manutenzione programmata. Ideale per seconde case e periodi di assenza.</p>
+            <a class="btn-outline" href="bundles/guardian_it.html">Dettagli</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/images/steward_detail1.jpg" alt="Pacchetto Steward">
+          <div class="card-body">
+            <h4><a href="bundles/steward_it.html">Steward</a></h4>
+            <p>Livello L2 — Gestione operativa completa, personale, lavori e qualità.</p>
+            <a class="btn-outline" href="bundles/steward_it.html">Dettagli</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/images/director_detail1.jpg" alt="Pacchetto Director">
+          <div class="card-body">
+            <h4><a href="bundles/director_it.html">Director</a></h4>
+            <p>Livello L3 — Direzione strategica, fornitori, budget e roadmap lavori.</p>
+            <a class="btn-outline" href="bundles/director_it.html">Dettagli</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 ELITE Solutions — 
+        <a href="privacy_terms/privacy_it.html">Privacy</a> · 
+        <a href="privacy_terms/terms_it.html">Termini</a> · 
+        <a href="contatti.html">Contatti</a>
+      </p>
+    </div>
+  </footer>
+
+  <div id="google_translate_element" style="display:none;"></div>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage:'it',autoDisplay:false},'google_translate_element');
+    }
+    function translateLanguage(lang){
+      if(lang!==''){
+        const selectField=document.querySelector('#google_translate_element select');
+        if(selectField){
+          selectField.value=lang;
+          selectField.dispatchEvent(new Event('change'));
+        } else {
+          document.cookie='googtrans=/it/'+lang+';path=/';
+          window.location.reload();
+        }
+      }
+    }
+  </script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
 </html>
