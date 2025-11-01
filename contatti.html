@@ -1,140 +1,64 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contatti ELITE Solutions</title>
-  <meta name="description" content="Modulo di contatto e riferimenti diretti per richiedere informazioni sui servizi di supervisione e gestione." />
-
-  <link rel="stylesheet" href="./assets/css/style.css" />
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-</head>
-
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <h1 class="logo">ELITE Solutions</h1>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="index_it.html">Home</a></li>
-          <li><a href="bundle_it.html">Pacchetti</a></li>
-          <li><a href="contatti.html" class="active">Contatti</a></li>
-          </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container main-content">
-    <section class="contact-grid">
-      <div class="contact-info">
-        <h3>Contattaci</h3>
-        <p>Utilizza il modulo per una richiesta rapida o i riferimenti diretti qui sotto.</p>
-        <p>Email: info@elitesolutions.com</p>
-        <p>Telefono: +39 0585 XXXXXXX</p>
-        <a href="https://wa.me/393885847092" class="btn-whatsapp">Contatta su WhatsApp</a>
-      </div>
-      <div class="contact-form">
-        </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>© 2025 ELITE Solutions — <a href="privacy_it.html">Privacy</a> · <a href="terms_it.html">Termini</a> · <a href="contatti.html">Contatti</a></p>
-    </div>
-  </footer>
-  <script src="./assets/js/main.js"></script>
-</body>
-
-</html><!DOCTYPE html>
-<html lang="it">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contatti – ELITE Solutions</title>
-  <meta name="description" content="Contatta ELITE Solutions per informazioni sui pacchetti di supervisione e gestione proprietà di pregio. Risposte rapide e personalizzate." />
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
+  <meta name="description" content="Contatta ELITE Solutions per informazioni, collaborazioni o richieste di preventivo personalizzate.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
 </head>
-
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <h1 class="logo">ELITE Solutions</h1>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="bundle_it.html">Pacchetti</a></li>
-          <li><a href="contatti.html" class="active">Contatti</a></li>
-          
-          <li>
-            <select id="languageSelector" onchange="translateLanguage(this.value)">
-              <option value="">🌐 Lingua</option>
-              <option value="it">Italiano</option>
-              <option value="en">English</option>
-              <option value="fr">Français</option>
-              <option value="de">Deutsch</option>
-              <option value="es">Español</option>
-              <option value="ru">Русский</option>
-              <option value="zh-CN">中文</option>
-              <option value="ja">日本語</option>
-              <option value="ar">العربية</option>
-            </select>
-          </li>
-        </ul>
-      </nav>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <h1 class="logo">ELITE Solutions</h1>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="bundle_it.html">Pacchetti</a></li>
+        <li><a href="contatti.html" class="active">Contatti</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="container main-content">
+  <section class="contact-grid" style="margin-top:120px;">
+    <div class="contact-info">
+      <h3>Contatta ELITE Solutions</h3>
+      <p>Per informazioni sui pacchetti, partnership o progetti personalizzati, compila il modulo oppure scrivi direttamente via email.</p>
+      <p><strong>Email:</strong> <a href="mailto:info@elitesolutions.it">info@elitesolutions.it</a></p>
+      <p><strong>Sede:</strong> Marina di Massa, Toscana – Italia</p>
+      <a href="https://wa.me/393885847092" target="_blank" class="btn-whatsapp">Contatta su WhatsApp</a>
     </div>
-  </header>
 
-  <main class="container main-content" style="margin-top:120px;">
-    <section>
-      <h2>Contattaci</h2>
-      <p class="section-subtitle">
-        Compila il modulo per richiedere informazioni o ricevere un contatto diretto da ELITE Solutions.
-      </p>
+    <div>
+      <form action="grazie.html" method="get">
+        <label>Nome e Cognome:</label><br>
+        <input type="text" name="nome" required><br><br>
 
-      <form id="contactForm" class="contact-form" onsubmit="event.preventDefault(); alert('Messaggio inviato correttamente! Ti risponderemo via email.');">
-        <label for="name">Nome e Cognome *</label>
-        <input type="text" id="name" name="name" required />
+        <label>Email:</label><br>
+        <input type="email" name="email" required><br><br>
 
-        <label for="email">Email *</label>
-        <input type="email" id="email" name="email" required />
-
-        <label for="message">Messaggio *</label>
-        <textarea id="message" name="message" rows="6" required></textarea>
+        <label>Messaggio:</label><br>
+        <textarea name="messaggio" rows="5" required></textarea><br><br>
 
         <button type="submit" class="btn-primary">Invia Messaggio</button>
       </form>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>© 2025 ELITE Solutions — 
-        <a href="privacy_terms/privacy_it.html">Privacy</a> · 
-        <a href="privacy_terms/terms_it.html">Termini</a>
-      </p>
     </div>
-  </footer>
+  </section>
+</main>
 
-  <div id="google_translate_element" style="display:none;"></div>
-  <script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({pageLanguage:'it',autoDisplay:false},'google_translate_element');
-    }
-    function translateLanguage(lang){
-      if(lang!==''){
-        const selectField=document.querySelector('#google_translate_element select');
-        if(selectField){
-          selectField.value=lang;
-          selectField.dispatchEvent(new Event('change'));
-        } else {
-          document.cookie='googtrans=/it/'+lang+';path=/';
-          window.location.reload();
-        }
-      }
-    }
-  </script>
-  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2025 ELITE Solutions — 
+      <a href="privacy_it.html">Privacy</a> · 
+      <a href="terms_it.html">Termini</a> · 
+      <a href="contatti.html">Contatti</a>
+    </p>
+  </div>
+</footer>
+
 </body>
 </html>
